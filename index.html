@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="disappearing" content="">
+    <title>NINJA JQUERY</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var imagen = 'ninja.png';
+            for (var i = 0; i < 8; i++) {
+                $('main').append('<div><img src="' + imagen + '"></div>');
+            }
+            $('img').click(function() {
+                $(this).fadeOut(2000);
+            })
+            $('button').click(function() {
+                $('img:hidden').fadeIn(2000);
+            });
+        });
+    </script>
+    <style>
+        body {
+            background-color: grey;
+        }
+        
+        #button {
+            background-color: green;
+            color: black;
+        }
+        
+        footer {
+            text-align: center;
+        }
+        
+        div {
+            display: inline-block;
+            vertical-align: top;
+            width: 150px;
+        }
+        
+        main {
+            margin: 0 auto;
+            padding-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+    </main>
+    <footer>
+        <button id="button" type="button" class="btn btn-primary active">Reiniciar</button>
+    </footer>
+
+</body>
+
+</html>
